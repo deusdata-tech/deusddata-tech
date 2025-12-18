@@ -1,45 +1,95 @@
-<html lang="en" dir="ltr">
-    <head>
-        <meta charset="utf-8">
-        <title>RDDMB</title>
-        <link rel="stylesheet" href="style.css">
-        <meta name="viewport" content="width=device-device, initial-scale">
-        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" integrity="sha512-SfTiTlX6kk+qitfevl/7LibUOeJWlt9rbyDn92a1DqWOw9vWG2MFoays0sgObmWazO5BQPiFucnnEAjpAB+/Sw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-    </head>
-    <body>
-        <nav>
-            <div class="logo">DEUSDATA TECH</div>
-            <ul>
-                <li><a href="#">HOME</a></li>
-                <li><a href="#">FEATURES</a>
-                    <ul>
-                        <li><a href="#">pages</a></li>
-                        <li><a href="#">Elements</a></li>
-                        <li><a href="#">Icons</a></li>
-                    </ul>
-                </li>
-                <li><a href="#">SERVICES</a>                        
-                    <ul>
-                        <li><a href="#">web Design</a></li>
-                        <li><a href="#">App Design</a></li>
-                        <li><a href="#">more</a>
-                            <ul>
-                                <li><a href="#">submenu-1</a></li>
-                                <li><a href="#">submenu-2</a></li>
-                                <li><a href="#">submenu-3</a></li>
-                            </ul>
-                        </li>
-                    </ul>
-                </li>
-                <li><a href="#">portfolio</a></li>
-                <li><a href="#">contact</a></li>
-            </ul>
-            <div class="search-icon"><i class="fas fa-shearch"></i></div>
-        </nav>
-        <div class="homepage">
-            <!--img src="Copy of PC,JPG.jpg" width="100%" alt=""-->
-            
-        </div>
-    </body>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Deusdata Technologies | Home</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
 
+    <!-- Header -->
+    <header class="header sticky">
+        <div class="logo">DEUSDATA <span>Technologies</span></div>
+        <input type="text" placeholder="Search printing services..." class="search">
+        <a href="https://wa.me/256709519292" class="btn">WhatsApp Us</a>
+    </header>
+
+    <!-- Navigation -->
+    <nav class="nav sticky">
+        <a href="index.html">Home</a>
+        <div class="dropdown">
+            <button class="dropbtn">Categories ▾</button>
+            <div class="dropdown-content">
+                <a href="services.html#tshirts">T-Shirts</a>
+                <a href="services.html#jackets">Jackets</a>
+                <a href="services.html#banners">Banners</a>
+                <a href="services.html#flyers">Flyers</a>
+                <a href="services.html#stamps">Stamps</a>
+                <a href="services.html#calendars">Calendars</a>
+                <a href="services.html#posters">Posters</a>
+            </div>
+        </div>
+        <a href="about us.html">About Us</a>
+        <a href="contact us.html">Contact</a>
+    </nav>
+
+    <!-- Carousel -->
+    <section class="carousel">
+        <div class="slides">
+            <img src="img/business-card.jpg"s alt="cap">
+            <img src="img/poster 1.jpg" alt="Banner 2">
+            <img src="img/T-Shirt.jpg" alt="Banner 3">
+        </div>
+    </section>
+
+    <!-- Featured Products Slider -->
+    <section class="featured">
+        <h2>Featured Products</h2>
+        <div class="slider">
+            <div class="slide"><a href="img/Black Casual  Short Sleeve Polyester Animal,Letter….jpg"><img src="img/Black Casual  Short Sleeve Polyester Animal,Letter….jpg" alt="T-Shirt"></a></div>
+            <div class="slide"><a href="img/poster 1.jpg"><img src="img/poster 1.jpg" alt="Jacket"></a></div>
+            <div class="slide"><a href="img/business-card.jpg"><img src="img/business-card.jpg" alt="Banner"></a></div>
+            <div class="slide"><a href="img/service.jpg"><img src="img/service.jpg" alt="Flyer"></a></div>
+            <div class="slide"><a href="img/Order additional ink cartridges for your snap….jpg"><img src="img/Order additional ink cartridges for your snap….jpg" alt="Flyer"></a></div>
+            <div class="slide"><a href="img/Need a logo for your family farm_ Grab this custom….jpg"><img src="img/Need a logo for your family farm_ Grab this custom….jpg" alt="Flyer"></a></div>
+            <div class="slide"><a href="img/the poster.jpg"><img src="img/the poster.jpg" alt="Flyer"></a></div>
+            <div class="slide"><a href="img/Olá, muito obrigado pela sua visita em nossa….jpg"><img src="img/Olá, muito obrigado pela sua visita em nossa….jpg" alt="Flyer"></a></div>
+            <div class="slide"><a href="img/CAP 1.jpg"><img src="img/CAP 1.jpg" alt="Flyer"></a></div>
+            <div class="slide"><a href="img/calendar.jpg"><img src="img/calendar.jpg" alt="Flyer"></a></div>
+            <div class="slide"><a href="img/CAP 1.jpg"><img src="img/CAP 1.jpg" alt="Flyer"></a></div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <p><strong>Deusdata Technologies</strong></p>
+        <p>📞 WhatsApp: +256 709 519 292</p>
+        <p>📧 Email: deusdata54@gmail.com</p>
+        <p>© 2025 Deusdata Technologies</p>
+    </footer>
+
+    <!-- JS Carousel & Slider -->
+    <script>
+        // Banner Carousel
+        let index = 0;
+        const slides = document.querySelectorAll('.carousel .slides img');
+        function showSlide() {
+            slides.forEach((slide, i) => slide.style.display = (i === index) ? 'block' : 'none');
+            index = (index + 1) % slides.length;
+        }
+        setInterval(showSlide, 3000);
+        showSlide();
+
+        // Featured Slider
+        const slider = document.querySelector('.slider');
+        let scrollAmount = 0;
+        setInterval(() => {
+            if(scrollAmount >= slider.scrollWidth - slider.clientWidth) scrollAmount = 0;
+            slider.scrollTo({ left: scrollAmount, behavior: 'smooth' });
+            scrollAmount += 220;
+        }, 2000);
+    </script>
+
+</body>
 </html>

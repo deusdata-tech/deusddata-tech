@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Services | Deusdata Technologies</title>
+    <link rel="stylesheet" href="style.css">
+    <script>
+        function openPopup(img, title, desc, price){
+          document.getElementById("popup").style.display = "block";
+          document.getElementById("popupImg").src = img;
+          document.getElementById("popupTitle").innerText = title;
+          document.getElementById("popupDesc").innerText = desc;
+          document.getElementById("popupPrice").innerText = price;
+        
+          document.getElementById("popupOrder").href =
+            "https://wa.me/256709519292?text=I%20want%20to%20order%20" + title;
+        }
+        
+        function closePopup(){
+          document.getElementById("popup").style.display = "none";
+        }
+        </script>
+</head>
+<body>
+
+    <header class="header sticky">
+        <div class="logo">DEUSDATA <span>Technologies</span></div>
+        <input type="text" placeholder="Search printing services..." class="search">
+        <a href="https://wa.me/256709519292" class="btn">WhatsApp Us</a>
+    </header>
+
+    <nav class="nav sticky">
+        <a href="index.html">Home</a>
+        <a href="services.html">Services</a>
+        <a href="about us.html">About Us</a>
+        <a href="contact us.html">Contact</a>
+    </nav>
+
+    <section class="products">
+        <h1>Our Services</h1>
+        <div class="product-grid">
+            <div id="tshirts" class="product">
+                <img src="img/t- shirt 4.jpg" alt="T-Shirt">
+                <h3>T-Shirts</h3>
+                <p>Custom branded t-shirts</p>
+                <a href="https://wa.me/256709519292?text=I%20want%20to%20order%20T-Shirts" class="order-btn">Order Now</a>
+            </div>
+            <div id="jackets" class="product">
+                <img src="img/t- shirt5.jpg" alt="Jacket">
+                <h3>Jackets</h3>
+                <p>Printed & embroidered jackets</p>
+                <a href="https://wa.me/256709519292?text=I%20want%20to%20order%20Jackets" class="order-btn">Order Now</a>
+            </div>
+            <div id="banners" class="product">
+                <img src="img/poster 2.jpg" alt="Banner">
+                <h3>Banners</h3>
+                <p>Indoor & outdoor banners</p>
+                <a href="https://wa.me/256709519292?text=I%20want%20to%20order%20Banners" class="order-btn">Order Now</a>
+            </div>
+            <div id="flyers" class="product">
+                <a href="img/poster 1.jpg"><img src="img/poster 1.jpg" alt="Flyer"></a>
+                <h3>Flyers</h3>
+                <p>High-quality promotional flyers</p>
+                <a href="https://wa.me/256709519292?text=I%20want%20to%20order%20Flyers" class="order-btn">Order Now</a>
+            </div>
+            <div id="stamps" class="product">
+                <img src="img/Order additional ink cartridges for your snap….jpg" alt="Stamp">
+                <h3>Stamps</h3>
+                <p>Official & company stamps</p>
+                <a href="https://wa.me/256709519292?text=I%20want%20to%20order%20Stamps" class="order-btn">Order Now</a>
+            </div>
+            <div id="calendars" class="product">
+                <img src="img/calendar.jpg" alt="Calendar">
+                <h3>Calendars</h3>
+                <p>Wall & desk calendars</p>
+                <a href="https://wa.me/256709519292?text=I%20want%20to%20order%20Calendars" class="order-btn">Order Now</a>
+            </div>
+            <div id="posters" class="product">
+                <img src="img/the poster.jpg" alt="Poster">
+                <h3>Posters</h3>
+                <p>Large format posters</p>
+                <a href="https://wa.me/256709519292?text=I%20want%20to%20order%20Posters" class="order-btn">Order Now</a>
+            </div>
+        </div>
+    </section><div id="popup" onclick="closePopup()">
+        <div class="popup-content" onclick="event.stopPropagation()">
+          <img id="popupImg">
+          <h2 id="popupTitle"></h2>
+          <p id="popupDesc"></p>
+          <h3 id="popupPrice"></h3>
+      
+          <a id="popupOrder" class="order-btn" target="_blank">
+            Order via WhatsApp
+          </a>
+      
+          <br><br>
+          <button onclick="closePopup()">Close</button>
+        </div>
+      </div>
+    <section class="products">
+        <div class="product-grid">
+            <div id="tshirts" class="product">
+                <img src="img/t- shirt 4.jpg" alt="T-Shirt">
+                <h3>T-Shirts</h3>
+                <p>Custom branded t-shirts</p>
+                <a href="https://wa.me/256709519292?text=I%20want%20to%20order%20T-Shirts" class="order-btn">Order Now</a>
+            </div>
+            <div id="jackets" class="product" onclick="openpopup('img/t-shirt.jpeg','UGX 30,000')">
+                <img src="img/t- shirt5.jpg" alt="Jacket">
+                <h3>Jackets</h3>
+                <p>Printed & embroidered jackets</p>
+                <span class="price">UGX 30,000</span>
+                <a href="https://wa.me/256709519292?text=I%20want%20to%20order%20Jackets" class="order-btn">Order Now</a>
+            </div>
+            <div id="banners" class="product">
+                <img src="img/t-shirt 3.jpg" alt="Banner">
+                <h3>Banners</h3>
+                <p>Indoor & outdoor banners</p>
+                <a href="https://wa.me/256709519292?text=I%20want%20to%20order%20Banners" class="order-btn">Order Now</a>
+            </div>
+            <div id="flyers" class="product">
+                <img src="img/T-Shirt.jpg" alt="Flyer">
+                <h3>Flyers</h3>
+                <p>High-quality promotional flyers</p>
+                <a href="https://wa.me/256709519292?text=I%20want%20to%20order%20Flyers" class="order-btn">Order Now</a>
+            </div>
+            <div id="stamps" class="product">
+                <img src="images/stamp.jpg" alt="Stamp">
+                <h3>Stamps</h3>
+                <p>Official & company stamps</p>
+                <a href="https://wa.me/256709519292?text=I%20want%20to%20order%20Stamps" class="order-btn">Order Now</a>
+            </div>
+            <div id="calendars" class="product">
+                <img src="images/calendar.jpg" alt="Calendar">
+                <h3>Calendars</h3>
+                <p>Wall & desk calendars</p>
+                <a href="https://wa.me/256709519292?text=I%20want%20to%20order%20Calendars" class="order-btn">Order Now</a>
+            </div>
+            <div id="posters" class="product">
+                <img src="images/poster.jpg" alt="Poster">
+                <h3>Posters</h3>
+                <p>Large format posters</p>
+                <a href="https://wa.me/256709519292?text=I%20want%20to%20order%20Posters" class="order-btn">Order Now</a>
+            </div>
+        </div>
+    </section>
+
+    <footer class="footer">
+        <p><strong>Deusdata Technologies</strong></p>
+        <p>📞 WhatsApp: +256 709 519 292</p>
+        <p>📧 Email: deusdata54@gmail.com</p>
+        <p>© 2025 Deusdata Technologies</p>
+    </footer>
+
+</body>
+</html>
